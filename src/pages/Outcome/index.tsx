@@ -3,8 +3,17 @@ import React from "react"
 import TitlePage from "../../componets/TitlePage"
 import Search from "../../componets/Search"
 import ListTransactions from "../../componets/ListTransactions"
+import RemoveIcon from '@mui/icons-material/Remove';
+import { Transaction } from "../../types/transaction.models"
 
 const Outcome: React.FC = () => {
+    const data: Transaction[] = [
+        { title: 'Mercado', value: 300, date: '19/01/2025' },
+        { title: 'Mercadp', value: 300, date: '19/01/2025' },
+        { title: 'Mercadp', value: 300, date: '19/01/2025' },
+        { title: 'Mercadp', value: 300, date: '19/01/2025' },
+        { title: 'Mercadp', value: 300, date: '19/01/2025' }
+    ]
 
     return (
         <>
@@ -16,7 +25,7 @@ const Outcome: React.FC = () => {
                     <Search />
                 </Grid2>
                 <Grid2 size={12} >
-                    <ListTransactions />
+                    <ListTransactions color="red" icon={<RemoveIcon />} data={data} />
                 </Grid2>
             </Grid2>
         </>
