@@ -12,14 +12,19 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import WalletIcon from '@mui/icons-material/Wallet';
 import LogoutOutlinedIcon from '@mui/icons-material/LogoutOutlined';
+import routes from '../routes/routes';
+import { useNavigate } from 'react-router-dom';
 
-const pages = ['Home', 'Entradas', 'Saídas'];
+
 
 const Navbar: React.FC = () => {
+
+    const navigate = useNavigate();
 
     const handleExit = () => {
         console.log('saiu')
     };
+
 
     return (
         <AppBar position="static">
@@ -29,8 +34,6 @@ const Navbar: React.FC = () => {
                     <Typography
                         variant="h6"
                         noWrap
-                        component="a"
-                        href="#app-bar-with-responsive-menu"
                         sx={{
                             mr: 2,
                             display: { xs: 'none', md: 'flex' },
@@ -68,20 +71,21 @@ const Navbar: React.FC = () => {
                             open={Boolean()}
                             sx={{ display: { xs: 'block', md: 'none', } }}
                         >
-                            {pages.map((page) => (
-                                <MenuItem key={page}>
-                                    <Typography sx={{ textAlign: 'center' }}>{page}</Typography>
+                            {routes.map((page) => (
+                                <MenuItem key={page.url}>
+                                    <Typography sx={{ textAlign: 'center' }}>{page.label}</Typography>
                                 </MenuItem>
                             ))}
                         </Menu>
                     </Box>
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-                        {pages.map((page) => (
+                        {routes.map((page) => (
                             <Button
-                                key={page}
+                                key={page.url}
                                 sx={{ my: 2, color: 'white', display: 'block', mr: 2, letterSpacing: '.1rem', }}
+                                onClick={() => navigate(page.url)}
                             >
-                                {page}
+                                {page.label}
                             </Button>
                         ))}
                     </Box>

@@ -11,7 +11,10 @@ const ModalStyled = styled(Box)({
     border: '2px solid #1976d2',
     boxShadow: '24',
     padding: '30px',
-    textAlign: 'center'
+    alignItems: 'center',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
 })
 
 export default ModalStyled
