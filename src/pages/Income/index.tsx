@@ -4,7 +4,6 @@ import TitlePage from "../../componets/TitlePage"
 import Search from "../../componets/Search"
 import ListTransactions from "../../componets/ListTransactions"
 import AddIcon from '@mui/icons-material/Add';
-import { data } from "react-router"
 import { Transaction } from "../../types/transaction.models"
 
 const Income: React.FC = () => {

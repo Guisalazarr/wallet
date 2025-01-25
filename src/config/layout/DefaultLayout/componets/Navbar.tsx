@@ -12,8 +12,8 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import WalletIcon from '@mui/icons-material/Wallet';
 import LogoutOutlinedIcon from '@mui/icons-material/LogoutOutlined';
-import routes from '../routes/routes';
 import { useNavigate } from 'react-router-dom';
+import routes from '../../../../routes/routes';
 
 
 
@@ -22,7 +22,7 @@ const Navbar: React.FC = () => {
     const navigate = useNavigate();
 
     const handleExit = () => {
-        console.log('saiu')
+        navigate('/')
     };
 
 
