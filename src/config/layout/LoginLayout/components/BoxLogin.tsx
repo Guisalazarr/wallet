@@ -2,7 +2,7 @@ import { Container, styled } from "@mui/material";
 
 const BoxLogin = styled(Container)({
     width: '500px',
-    height: '350px',
+    height: '100%',
     borderRadius: '5%',
     textAlign: 'center',
     color: 'white',

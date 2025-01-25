@@ -35,19 +35,20 @@ const Login: React.FC = () => {
                 <Button
                     variant="contained"
                     size="large"
-                    sx={{ paddingX: '80px' }}
+                    sx={{ height: '50px' }}
                     color="primary"
                     onClick={() => navigate('./home')}
+                    fullWidth
                 >
                     Entrar
                 </Button>
             </Grid2>
             <Grid2 size={12}>
-                <Link style={{ cursor: 'pointer' }}>
+                <Button variant='outlined' size='large' style={{ cursor: 'pointer' }} fullWidth sx={{ height: '50px' }} onClick={() => navigate('/register')}>
                     <Typography variant="body2" color="black">
-                        CADASTRE-SE
+                        CRIAR CONTA
                     </Typography>
-                </Link>
+                </Button>
             </Grid2>
         </Grid2>
     );
