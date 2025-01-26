@@ -8,11 +8,11 @@ import { Transaction } from "../../types/transaction.models"
 
 const Income: React.FC = () => {
     const data: Transaction[] = [
-        { title: 'Zanotti', value: 50000, date: '10/04/2000' },
-        { title: 'Zanotti', value: 50000, date: '10/04/2000' },
-        { title: 'Zanotti', value: 50000, date: '10/04/2000' },
-        { title: 'Zanotti', value: 50000, date: '10/04/2000' },
-        { title: 'Zanotti', value: 50000, date: '10/04/2000' }
+        { title: 'Zanotti', value: 50000, type: 'income', date: '10/04/2000' },
+        { title: 'Zanotti', value: 50000, type: 'income', date: '10/04/2000' },
+        { title: 'Zanotti', value: 50000, type: 'income', date: '10/04/2000' },
+        { title: 'Zanotti', value: 50000, type: 'income', date: '10/04/2000' },
+        { title: 'Zanotti', value: 50000, type: 'income', date: '10/04/2000' }
     ]
     return (
         <>

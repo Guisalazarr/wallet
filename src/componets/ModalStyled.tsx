@@ -15,6 +15,7 @@ const ModalStyled = styled(Box)({
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
+    textAlign: 'center'
 })
 
 export default ModalStyled

@@ -8,11 +8,11 @@ import { Transaction } from "../../types/transaction.models"
 
 const Outcome: React.FC = () => {
     const data: Transaction[] = [
-        { title: 'Mercado', value: 300, date: '19/01/2025' },
-        { title: 'Mercadp', value: 300, date: '19/01/2025' },
-        { title: 'Mercadp', value: 300, date: '19/01/2025' },
-        { title: 'Mercadp', value: 300, date: '19/01/2025' },
-        { title: 'Mercadp', value: 300, date: '19/01/2025' }
+        { title: 'Mercado', value: 300, type: 'outcome', date: '19/01/2025' },
+        { title: 'Mercadp', value: 300, type: 'outcome', date: '19/01/2025' },
+        { title: 'Mercadp', value: 300, type: 'outcome', date: '19/01/2025' },
+        { title: 'Mercadp', value: 300, type: 'outcome', date: '19/01/2025' },
+        { title: 'Mercadp', value: 300, type: 'outcome', date: '19/01/2025' }
     ]
 
     return (
