@@ -6,6 +6,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 import React from 'react';
 import { Transaction } from '../types/transaction.models';
+import { ToFormatReal } from '../utils/toFormatReal';
 
 interface ListTransactionsProps {
     data: Transaction[]
@@ -25,7 +26,7 @@ const ListTransactions: React.FC<ListTransactionsProps> = ({ data, color, icon }
                             <Icon sx={{ color: { color }, marginRight: '2rem' }} >
                                 {icon}
                             </Icon>
-                            <ListItemText primary={item.value.toFixed(2)} />
+                            <ListItemText primary={ToFormatReal(item.value)} />
                             <ListItemText primary={item.title} />
                             <ListItemText primary={item.date} />
                             <IconButton size='large'>
