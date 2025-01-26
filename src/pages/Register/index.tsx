@@ -49,17 +49,17 @@ const Register: React.FC = () => {
                         variant="outlined"
                     />
                 </Grid2>
-                <Grid2 size={12}>
+                <Grid2 size={6} >
+                    <Button variant='outlined' size='large' fullWidth sx={{ height: '50px' }} onClick={() => navigate('/')}>
+                        <Typography variant="body2" color="black">
+                            JÁ TENHO CONTA
+                        </Typography>
+                    </Button>
+                </Grid2>
+                <Grid2 size={6}>
                     <Button variant="contained" color="primary" size="large" fullWidth sx={{ height: '50px' }} >
                         Cadastre-se
                     </Button>
-                    <Grid2 size={12} sx={{ marginTop: '10px' }}>
-                        <Button variant='outlined' size='large' style={{ cursor: 'pointer' }} fullWidth sx={{ height: '50px' }} onClick={() => navigate('/')}>
-                            <Typography variant="body2" color="black">
-                                JÁ TENHO CONTA
-                            </Typography>
-                        </Button>
-                    </Grid2>
                 </Grid2>
             </Grid2>
         </>
