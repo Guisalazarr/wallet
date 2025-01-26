@@ -4,15 +4,15 @@ import TitlePage from "../../components/TitlePage"
 import Search from "../../components/Search"
 import ListTransactions from "../../components/ListTransactions"
 import AddIcon from '@mui/icons-material/Add';
-import { Transaction } from "../../types/transaction.models"
+import { Transaction, TransactionType } from "../../types/transaction.models"
 
 const Income: React.FC = () => {
     const data: Transaction[] = [
-        { title: 'Zanotti', value: 5000, type: 'income', date: '10/04/2000' },
-        { title: 'Zanotti', value: 5000, type: 'income', date: '10/04/2000' },
-        { title: 'Zanotti', value: 5000, type: 'income', date: '10/04/2000' },
-        { title: 'Zanotti', value: 5000, type: 'income', date: '10/04/2000' },
-        { title: 'Zanotti', value: 5000, type: 'income', date: '10/04/2000' }
+        { title: 'Zanotti', value: 5000, type: TransactionType.Income, date: new Date() },
+        { title: 'Zanotti', value: 5000, type: TransactionType.Income, date: new Date() },
+        { title: 'Zanotti', value: 5000, type: TransactionType.Income, date: new Date() },
+        { title: 'Zanotti', value: 5000, type: TransactionType.Income, date: new Date() },
+        { title: 'Zanotti', value: 5000, type: TransactionType.Income, date: new Date() }
     ]
     return (
         <>

@@ -1,7 +1,7 @@
 import React from "react"
 import CardStyled from "./CardStyled"
 import { Typography } from "@mui/material"
-import { ToFormatReal } from "../../../utils/toFormatReal"
+import { toFormatReal } from "../../../utils/toFormatReal"
 
 interface CardProps {
     title: string,
@@ -14,7 +14,7 @@ const Card: React.FC<CardProps> = ({ title, value }) => {
 
         <CardStyled elevation={3}>
             <Typography variant="h5" color="white" marginBottom={5}>{title}</Typography>
-            <Typography variant="h3" color="white">{ToFormatReal(value)}</Typography>
+            <Typography variant="h3" color="white">{toFormatReal(value)}</Typography>
         </CardStyled >
     )
 }

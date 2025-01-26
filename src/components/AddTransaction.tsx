@@ -4,7 +4,7 @@ import Modal from '@mui/material/Modal';
 import ModalStyled from './ModalStyled';
 import { Button, FormControl, Grid2, InputLabel, MenuItem, Select, TextField } from '@mui/material';
 import { useState } from 'react';
-import { Transaction } from '../types/transaction.models';
+import { Transaction, TransactionType } from '../types/transaction.models';
 
 interface AddTransactionProps {
     openModal: boolean
@@ -15,14 +15,12 @@ const AddTransaction: React.FC<AddTransactionProps> = ({ openModal, actionClose 
 
     const [title, setTitle] = useState<string>('')
     const [value, setValue] = useState<number>(0)
-    const [type, setType] = useState<string>('')
-    const [date, setDate] = useState<any>()
+    const [type, setType] = useState<TransactionType>(TransactionType.Income)
+    const [date, setDate] = useState<string>('')
 
-    const createTransaction = () => {
-        console.log(transaciton)
-    }
 
-    const transaciton: Transaction = ({ title, value, type, date })
+    const transaciton: Transaction = ({ title, value, type, date: new Date(date) })
+
     return (
         <>
             <Modal
@@ -58,10 +56,11 @@ const AddTransaction: React.FC<AddTransactionProps> = ({ openModal, actionClose 
                                     id="demo-simple-select"
                                     value={type}
                                     label="tipo"
-                                    onChange={e => setType(e.target.value)}
+                                    defaultValue={TransactionType.Income}
+                                    onChange={e => setType(e.target.value as TransactionType)}
                                 >
-                                    <MenuItem value={10}>Entrada</MenuItem>
-                                    <MenuItem value={20}>Saída</MenuItem>
+                                    <MenuItem value={TransactionType.Income}>Entrada</MenuItem>
+                                    <MenuItem value={TransactionType.Outcome}>Saída</MenuItem>
                                 </Select>
                             </FormControl>
                         </Grid2>
@@ -69,24 +68,9 @@ const AddTransaction: React.FC<AddTransactionProps> = ({ openModal, actionClose 
                             <Button onClick={actionClose} variant='outlined' size='large' fullWidth >Cancelar</Button>
                         </Grid2>
                         <Grid2 size={6}>
-                            <Button onClick={createTransaction} variant='contained' size='large' fullWidth  >Adicionar</Button>
+                            <Button onClick={() => console.log(transaciton)} variant='contained' size='large' fullWidth  >Adicionar</Button>
                         </Grid2>
-
-
-
-
-
-
-
-
-
-
-
-
-
                     </Grid2>
-
-
                 </ModalStyled>
             </Modal >
         </>
