@@ -6,7 +6,7 @@ const CardStyled = styled(Paper)({
     textAlign: 'center',
     color: 'white',
     padding: '20px',
-    backgroundColor: '#0050c3'
+    backgroundColor: '#17266b'
 
 })
 
