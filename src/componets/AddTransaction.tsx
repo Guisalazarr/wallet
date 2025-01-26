@@ -56,9 +56,9 @@ const AddTransaction: React.FC<AddTransactionProps> = ({ openModal, actionClose 
                     <TextField id="outlined-basic" label="Valor" type='number' value={value} onChange={e => setValue(Number(e.target.value))} variant="outlined" fullWidth sx={{ mb: '10px', mt: '10px' }} required />
 
 
-
-                    <Button onClick={actionClose} variant='outlined' size='large' fullWidth sx={{ mb: '10px', mt: '10px' }}>Cancelar</Button>
                     <Button onClick={createTransaction} variant='contained' size='large' fullWidth  >Adicionar</Button>
+                    <Button onClick={actionClose} variant='outlined' size='large' fullWidth sx={{ mb: '10px', mt: '10px' }}>Cancelar</Button>
+
                 </ModalStyled>
             </Modal >
         </>

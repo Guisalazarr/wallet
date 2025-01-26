@@ -2,6 +2,7 @@ import { Grid2 } from '@mui/material';
 import React from 'react';
 import Navbar from './componets/Navbar';
 import ContainerLayout from './componets/ContainerLayout'
+import Footer from './componets/Footer';
 
 
 interface DefaultLayoutProps {
@@ -18,6 +19,9 @@ const DefaultLayout: React.FC<DefaultLayoutProps> = ({ component: Component }) =
                 <ContainerLayout maxWidth="md">
                     <Component />
                 </ContainerLayout>
+            </Grid2>
+            <Grid2 size={12}>
+                <Footer />
             </Grid2>
         </Grid2>
     );
