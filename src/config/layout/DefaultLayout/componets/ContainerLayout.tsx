@@ -4,9 +4,9 @@ const ContainerLayout = styled(Container)({
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
-    marginTop: '2rem',
-    marginBottom: '20px',
-
+    paddingTop: '4rem',
+    paddingBottom: '1rem',
+    minHeight: '100vh'
 });
 
 export default ContainerLayout;
