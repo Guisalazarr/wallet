@@ -71,7 +71,7 @@ const AddTransaction: React.FC<AddTransactionProps> = ({ openModal, actionClose,
                             <Button onClick={actionClose} variant='outlined' size='large' fullWidth >Cancelar</Button>
                         </Grid2>
                         <Grid2 size={6}>
-                            <Button onClick={() => console.log(transaciton)} variant='contained' size='large' fullWidth  >Adicionar</Button>
+                            <Button variant='contained' size='large' fullWidth  >Adicionar</Button>
                         </Grid2>
                     </Grid2>
                 </ModalStyled>

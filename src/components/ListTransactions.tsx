@@ -21,7 +21,6 @@ const ListTransactions: React.FC<ListTransactionsProps> = ({ data, color, icon }
 
     const handleEdit = (transaction: Transaction) => {
         setOpenModal(true)
-        console.log(transaction)
     }
 
     return (
