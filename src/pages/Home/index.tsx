@@ -1,13 +1,11 @@
 import React, { useState } from "react"
 import { Button, Grid2 } from "@mui/material"
 import AddIcon from '@mui/icons-material/Add';
-import TitlePage from "../../componets/TitlePage";
-import Dashboard from "../../componets/Dashboard";
-import AddTransaction from "../../componets/AddTransaction";
-
+import TitlePage from "../../components/TitlePage";
+import AddTransaction from "../../components/AddTransaction";
+import Dashboard from "./components/Dashboard";
 
 const Home: React.FC = () => {
-
     const [openModal, setOpenModal] = useState<boolean>(false);
 
     return (

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, Grid2, Link, TextField, Typography } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
-import TitlePage from '../../componets/TitlePage';
+import TitlePage from '../../components/TitlePage';
 
 
 const Register: React.FC = () => {

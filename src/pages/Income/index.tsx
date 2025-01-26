@@ -1,8 +1,8 @@
 import { Grid2 } from "@mui/material"
 import React from "react"
-import TitlePage from "../../componets/TitlePage"
-import Search from "../../componets/Search"
-import ListTransactions from "../../componets/ListTransactions"
+import TitlePage from "../../components/TitlePage"
+import Search from "../../components/Search"
+import ListTransactions from "../../components/ListTransactions"
 import AddIcon from '@mui/icons-material/Add';
 import { Transaction } from "../../types/transaction.models"
 

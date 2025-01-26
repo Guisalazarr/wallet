@@ -1,6 +1,6 @@
 import { Button, Grid2, Link, TextField, Typography } from "@mui/material";
 import React from "react"
-import TitlePage from "../../componets/TitlePage";
+import TitlePage from "../../components/TitlePage";
 import { useNavigate } from "react-router-dom";
 
 
