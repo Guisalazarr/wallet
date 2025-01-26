@@ -9,6 +9,7 @@ import AddTransaction from "../../componets/AddTransaction";
 const Home: React.FC = () => {
 
     const [openModal, setOpenModal] = useState<boolean>(false);
+
     return (
         <>
             <Grid2 container>
