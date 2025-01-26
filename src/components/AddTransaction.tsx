@@ -5,13 +5,16 @@ import ModalStyled from './ModalStyled';
 import { Button, FormControl, Grid2, InputLabel, MenuItem, Select, TextField } from '@mui/material';
 import { useState } from 'react';
 import { Transaction, TransactionType } from '../types/transaction.models';
+import generateId from '../utils/generateId';
+
 
 interface AddTransactionProps {
     openModal: boolean
     actionClose: () => void
+    titleModal: string
 }
 
-const AddTransaction: React.FC<AddTransactionProps> = ({ openModal, actionClose }) => {
+const AddTransaction: React.FC<AddTransactionProps> = ({ openModal, actionClose, titleModal }) => {
 
     const [title, setTitle] = useState<string>('')
     const [value, setValue] = useState<number>(0)
@@ -19,7 +22,7 @@ const AddTransaction: React.FC<AddTransactionProps> = ({ openModal, actionClose 
     const [date, setDate] = useState<string>('')
 
 
-    const transaciton: Transaction = ({ title, value, type, date: new Date(date) })
+    const transaciton: Transaction = ({ id: generateId(), title, value, type, date: new Date(date) })
 
     return (
         <>
@@ -34,7 +37,7 @@ const AddTransaction: React.FC<AddTransactionProps> = ({ openModal, actionClose 
                     <Grid2 container spacing={1}>
                         <Grid2 size={12}>
                             <Typography id="modal-modal-title" variant="h5" component="h2" marginBottom={3}>
-                                Adicione uma transação
+                                {titleModal}
                             </Typography>
                         </Grid2>
 

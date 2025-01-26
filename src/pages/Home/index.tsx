@@ -27,6 +27,7 @@ const Home: React.FC = () => {
                 <AddTransaction
                     actionClose={() => setOpenModal(false)}
                     openModal={openModal}
+                    titleModal="ADICIONAR TRANSAÇÃO"
                 />
             </Grid2>
         </>
