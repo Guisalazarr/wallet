@@ -31,14 +31,7 @@ const Login: React.FC = () => {
                     variant="outlined"
                 />
             </Grid2>
-            <Grid2 size={6}>
-                <Button variant='outlined' size='large' style={{ cursor: 'pointer' }} fullWidth sx={{ height: '50px' }} onClick={() => navigate('/register')}>
-                    <Typography variant="body2" color="black">
-                        CRIAR CONTA
-                    </Typography>
-                </Button>
-            </Grid2>
-            <Grid2 size={6}>
+            <Grid2 size={12}>
                 <Button
                     variant="contained"
                     size="large"
@@ -50,7 +43,13 @@ const Login: React.FC = () => {
                     Entrar
                 </Button>
             </Grid2>
-
+            <Grid2 size={12}>
+                <Button variant='outlined' size='large' style={{ cursor: 'pointer' }} fullWidth sx={{ height: '50px' }} onClick={() => navigate('/register')}>
+                    <Typography variant="body2" color="black">
+                        CRIAR CONTA
+                    </Typography>
+                </Button>
+            </Grid2>
         </Grid2>
     );
 }

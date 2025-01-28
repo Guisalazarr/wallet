@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Grid2, Link, TextField, Typography } from '@mui/material';
+import { Button, Grid2, TextField, Typography } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import TitlePage from '../../components/TitlePage';
 
@@ -49,18 +49,19 @@ const Register: React.FC = () => {
                         variant="outlined"
                     />
                 </Grid2>
-                <Grid2 size={6} >
+                <Grid2 size={12}>
+                    <Button variant="contained" color="primary" size="large" fullWidth sx={{ height: '50px' }} >
+                        Cadastre-se
+                    </Button>
+                </Grid2>
+                <Grid2 size={12} >
                     <Button variant='outlined' size='large' fullWidth sx={{ height: '50px' }} onClick={() => navigate('/')}>
                         <Typography variant="body2" color="black">
                             JÁ TENHO CONTA
                         </Typography>
                     </Button>
                 </Grid2>
-                <Grid2 size={6}>
-                    <Button variant="contained" color="primary" size="large" fullWidth sx={{ height: '50px' }} >
-                        Cadastre-se
-                    </Button>
-                </Grid2>
+
             </Grid2>
         </>
     );
