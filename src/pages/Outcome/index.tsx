@@ -5,14 +5,15 @@ import Search from "../../components/Search"
 import ListTransactions from "../../components/ListTransactions"
 import RemoveIcon from '@mui/icons-material/Remove';
 import { Transaction, TransactionType } from "../../types/transaction.models"
+import generateId from "../../utils/generateId"
 
 const Outcome: React.FC = () => {
     const data: Transaction[] = [
-        { title: 'Mercado', value: 300, type: TransactionType.Outcome, date: new Date() },
-        { title: 'Mercado', value: 300, type: TransactionType.Outcome, date: new Date() },
-        { title: 'Mercado', value: 300, type: TransactionType.Outcome, date: new Date() },
-        { title: 'Mercado', value: 300, type: TransactionType.Outcome, date: new Date() },
-        { title: 'Mercado', value: 300, type: TransactionType.Outcome, date: new Date() }
+        { id: generateId(), title: 'Mercado', value: 300, type: TransactionType.Outcome, date: new Date() },
+        { id: generateId(), title: 'Mercado', value: 300, type: TransactionType.Outcome, date: new Date() },
+        { id: generateId(), title: 'Mercado', value: 300, type: TransactionType.Outcome, date: new Date() },
+        { id: generateId(), title: 'Mercado', value: 300, type: TransactionType.Outcome, date: new Date() },
+        { id: generateId(), title: 'Mercado', value: 300, type: TransactionType.Outcome, date: new Date() }
     ]
 
     return (

@@ -5,14 +5,15 @@ import Search from "../../components/Search"
 import ListTransactions from "../../components/ListTransactions"
 import AddIcon from '@mui/icons-material/Add';
 import { Transaction, TransactionType } from "../../types/transaction.models"
+import generateId from "../../utils/generateId"
 
 const Income: React.FC = () => {
     const data: Transaction[] = [
-        { title: 'Zanotti', value: 5000, type: TransactionType.Income, date: new Date() },
-        { title: 'Zanotti', value: 5000, type: TransactionType.Income, date: new Date() },
-        { title: 'Zanotti', value: 5000, type: TransactionType.Income, date: new Date() },
-        { title: 'Zanotti', value: 5000, type: TransactionType.Income, date: new Date() },
-        { title: 'Zanotti', value: 5000, type: TransactionType.Income, date: new Date() }
+        { id: generateId(), title: 'Zanotti', value: 5000, type: TransactionType.Income, date: new Date() },
+        { id: generateId(), title: 'Zanotti', value: 5000, type: TransactionType.Income, date: new Date() },
+        { id: generateId(), title: 'Zanotti', value: 5000, type: TransactionType.Income, date: new Date() },
+        { id: generateId(), title: 'Zanotti', value: 5000, type: TransactionType.Income, date: new Date() },
+        { id: generateId(), title: 'Zanotti', value: 5000, type: TransactionType.Income, date: new Date() }
     ]
     return (
         <>
